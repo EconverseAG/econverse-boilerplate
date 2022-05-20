@@ -1,5 +1,16 @@
 {
   "name": "@STORE_NAME/store-theme",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "npm run clean && concurrently \"npm:sass\" \"npm:vlink\" \"npm:sass-react\"",
+    "vlink": "vtex link --verbose",
+    "sass": "sass --watch --no-source-map styles/scss:styles/css --style compressed"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "global": "^4.4.0",
+    "sass": "^1.32.7"
+  },
   "devDependencies": {
     "@vtex/danger": "^0.2.9",
     "@vtex/intl-equalizer": "^2.5.1",

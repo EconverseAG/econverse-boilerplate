@@ -3,7 +3,10 @@
   "scripts": {
     "lint": "eslint --ext js,jsx,ts,tsx .",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
-    "test": "vtex-test-tools test --watchAll"
+    "clean": "rm -rf dist",
+    "start": "npm run clean && concurrently \"npm:vlink\" \"npm:sass-react\"",
+    "vlink": "vtex link --verbose",
+    "sass-react": "sass --watch --no-source-map react/styles/scss:react/styles/css --style compressed\""
   },
   "devDependencies": {
     "@apollo/react-testing": "3",
