@@ -1,0 +1,26 @@
+{
+  "name": "@STORE_NAME/store-theme",
+  "scripts": {
+    "lint": "eslint --ext js,jsx,ts,tsx .",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
+    "test": "vtex-test-tools test --watchAll"
+  },
+  "devDependencies": {
+    "@apollo/react-testing": "3",
+    "@babel/core": "^7.17.12",
+    "@types/babel__core": "^7.1.19",
+    "@vtex/danger": "^0.2.9",
+    "@vtex/intl-equalizer": "^2.5.1",
+    "@vtex/prettier-config": "0.1.4",
+    "@vtex/test-tools": "^3.4.3",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.14.0",
+    "eslint-config-vtex": "^15.0.0",
+    "eslint-config-vtex-react": "^9.0.0",
+    "husky": "4.2.3",
+    "lint-staged": "10.1.1",
+    "prettier": "2.0.2",
+    "react-intl": "3",
+    "typescript": "3.8.3"
+  }
+}

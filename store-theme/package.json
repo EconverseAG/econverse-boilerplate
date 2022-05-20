@@ -1,0 +1,13 @@
+{
+  "name": "@STORE_NAME/store-theme",
+  "devDependencies": {
+    "@vtex/danger": "^0.2.9",
+    "@vtex/intl-equalizer": "^2.5.1",
+    "@vtex/prettier-config": "0.1.4",
+    "eslint": "^8.14.0",
+    "eslint-config-vtex": "^15.0.0",
+    "eslint-config-vtex-react": "^9.0.0",
+    "husky": "4.2.3",
+    "prettier": "2.0.2"
+  }
+}
