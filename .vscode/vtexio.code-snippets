@@ -1,0 +1,540 @@
+{
+  /*FLEX LAYOUT ************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.flex-layout@0.15.1/ */
+
+  "flex-layout.row": {
+    "prefix": "flr",
+    "scope": "jsonc",
+    "body": [
+      "\"flex-layout.row#$1\" : { ",
+      "\t \"title\": \"${2}\",",
+      "\t \"props\" : {",
+      "\t \t\"blockClass\" : \"${1}\",",
+      "\t \t},",
+      "\t \"children\": [\"${3}\"]"
+    ],
+    "description": "Flex-Layout Row - Basic"
+  },
+
+  "flex-layout.col": {
+    "prefix": "flc",
+    "scope": "jsonc",
+    "body": [
+      "\"flex-layout.row#$1\" : { ",
+      "\t \"title\": \"${2}\",",
+      "\t \"props\" : {",
+      "\t \t\"blockClass\" : \"${1}\",",
+      "\t \t},",
+      "\t \"children\": [\"${3}\"]"
+    ],
+    "description": "Flex-Layout Column - Basic"
+  },
+
+  /* DISCLOSURE LAYOUT *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.disclosure-layout@1.0.3/ */
+
+  "disclosure-layout": {
+    "prefix": "dcl",
+    "scope": "jsonc",
+    "body": [
+      "\"disclosure-layout#simple\": {",
+      "\t \"children\": [\"disclosure-trigger#simple\", \"disclosure-content#simple\"]",
+      "},",
+      "\"disclosure-trigger#simple\": {",
+      "\t \"children\": [\"rich-text#question\"]",
+      "},",
+      "\"disclosure-content#simple\": {",
+      "\t \"children\": [\"rich-text#answer\"]",
+      "},",
+      "\"rich-text#question\": {",
+      "\t \"props\": {",
+      "\t \"text\": \"How can I change my shipping address?\"",
+      "\t }",
+      "},",
+      "\"rich-text#answer\": {",
+      "\"props\": {",
+      "\"text\": \"Call us at the number (212) 1234-1234\"",
+      "}",
+      "}"
+    ],
+    "description": "Disclosure Layout  - Simple"
+  },
+
+  "disclosure-layout-group": {
+    "prefix": "dclg",
+    "body": [
+      "{",
+      "  \"disclosure-layout-group#group\": {",
+      "    \"children\": [\"disclosure-layout#first\", \"disclosure-layout#second\"]",
+      "  },",
+      "",
+      "  \"disclosure-layout#first\": {",
+      "    \"children\": [\"disclosure-trigger#first\", \"disclosure-content#first\"]",
+      "  },",
+      "  \"disclosure-trigger#first\": {",
+      "    \"children\": [\"rich-text#question1\"]",
+      "  },",
+      "  \"disclosure-content#first\": {",
+      "    \"children\": [\"rich-text#answer1\"]",
+      "  },",
+      "  \"rich-text#question1\": {",
+      "    \"props\": {",
+      "      \"text\": \"How can I change my shipping address?\"",
+      "    }",
+      "  },",
+      "  \"rich-text#answer1\": {",
+      "    \"props\": {",
+      "      \"text\": \"Call us at the number (212) 1234-1234.\"",
+      "    }",
+      "  },",
+      "",
+      "  \"disclosure-layout#second\": {",
+      "    \"children\": [\"disclosure-trigger#first\", \"disclosure-content#first\"]",
+      "  },",
+      "  \"disclosure-trigger#second\": {",
+      "    \"children\": [\"rich-text#question1\"]",
+      "  },",
+      "  \"disclosure-content#second\": {",
+      "    \"children\": [\"rich-text#answer1\"]",
+      "  },",
+      "  \"rich-text#question2\": {",
+      "    \"props\": {",
+      "      \"text\": \"How can I track my order?\"",
+      "    }",
+      "  },",
+      "  \"rich-text#answer2\": {",
+      "    \"props\": {",
+      "      \"text\": \"After logging into your account, you can find this info at the link Orders.\"",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "disclosure-layout"
+  },
+
+  "disclosure-state-indicator": {
+    "prefix": "dcsi",
+    "body": [
+      "{",
+      "  \"disclosure-state-indicator\": {",
+      "    \"props\": {",
+      "      \"Show\": \"icon-angle--down\",",
+      "      \"Hide\": \"icon-angle--up\"",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "disclosure-state-indicator"
+  },
+
+  /* Modal Layout *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.modal-layout@0.7.1/ */
+
+  "modal-trigger": {
+    "prefix": "mdt",
+    "body": [
+      "\"store.home\": {",
+      "    \"children\": [",
+      "      \"modal-trigger#example\"",
+      "    ]",
+      "  },",
+      "   \"modal-trigger#example\": {",
+      "    \"children\": [",
+      "      \"rich-text#example\",",
+      "      \"modal-layout#example\"",
+      "    ]",
+      "  },",
+      "  \"rich-text#example\": {",
+      "    \"props\": {",
+      "      \"text\": \"Click me\"",
+      "    }",
+      "  },",
+      "  \"modal-layout#example\": {",
+      "    \"children\": [",
+      "      \"rich-text#modal-content\"",
+      "    ]",
+      "  },",
+      "  \"rich-text#modal-content\": {",
+      "    \"props\": {",
+      "      \"text\": \"Hello\"",
+      "    }",
+      "  }"
+    ],
+    "description": "modal-trigger"
+  },
+
+  /* Responsive Layout *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.responsive-layout@0.1.3/ */
+
+  "responsive-layout": {
+    "prefix": "rl",
+    "body": [
+      "\"store.custom#about-us\": {",
+      "    \"blocks\": [",
+      "      \"responsive-layout.desktop\",",
+      "      \"responsive-layout.tablet\",",
+      "      \"responsive-layout.phone\"",
+      "    ]",
+      "  },",
+      "  ",
+      "  \"responsive-layout.desktop\": {",
+      "    \"children\": [\"rich-text#desktop\"]",
+      "  },",
+      "  \"responsive-layout.tablet\": {",
+      "    \"children\": [\"rich-text#tablet\"]",
+      "  },",
+      "  \"responsive-layout.phone\": {",
+      "    \"children\": [\"rich-text#phone\"]",
+      "  },",
+      "",
+      "  \"rich-text#desktop\": {",
+      "    \"props\": {",
+      "      \"text\": \"# This will only show up on desktop.\",",
+      "      \"blockClass\": \"title\"",
+      "    }",
+      "  },",
+      "  \"rich-text#tablet\": {",
+      "    \"props\": {",
+      "      \"text\": \"# This will only show up on tablet.\",",
+      "      \"blockClass\": \"title\"",
+      "    }",
+      "  },",
+      "  \"rich-text#phone\": {",
+      "    \"props\": {",
+      "      \"text\": \"# This will only show up on phone.\",",
+      "      \"blockClass\": \"title\"",
+      "    }",
+      "  },"
+    ],
+    "description": "responsive-layout"
+  },
+
+  /* Slider Layout *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.slider-layout@0.15.1/ */
+
+  "slider-layout": {
+    "prefix": "sl",
+    "body": [
+      " \"slider-layout#text-test\": {",
+      "    \"props\": {",
+      "      \"itemsPerPage\": {",
+      "        \"desktop\": 1,",
+      "        \"tablet\": 1,",
+      "        \"phone\": 1",
+      "      },",
+      "      \"infinite\": true,",
+      "      \"showNavigationArrows\": \"desktopOnly\",",
+      "      \"blockClass\": \"carousel\"",
+      "    },",
+      "    \"children\": [\"rich-text#1\", \"rich-text#2\", \"rich-text#3\"]",
+      "  },",
+      "",
+      "  \"rich-text#1\": {",
+      "    \"props\": {",
+      "      \"text\": \"Test1\"",
+      "    }",
+      "  },",
+      "  \"rich-text#2\": {",
+      "    \"props\": {",
+      "      \"text\": \"Test2\"",
+      "    }",
+      "  },",
+      "  \"rich-text#3\": {",
+      "    \"props\": {",
+      "      \"text\": \"Test3\"",
+      "    }",
+      "  },"
+    ],
+    "description": "slider-layout"
+  },
+
+  /* VTEX Stack Layout *****************************************************************************************************************************************************************************************************/
+  /*****https://vtex.io/docs/components/all/vtex.stack-layout@0.1.0/ */
+
+  "stack-layout": {
+    "prefix": "stl",
+    "body": [
+      "",
+      "/* Use this layout component to show blocks on top of other blocks. */",
+      "  \"stack-layout\": {",
+      "    \"children\": [",
+      "      \"flex-layout.row#viewone\",",
+      "      \"flex-layout.row#viewtwo\",",
+      "      \"flex-layout.row#viewthree\"",
+      "    ]",
+      "  }"
+    ],
+    "description": "stack-layout"
+  },
+
+  /* VTEX Sticky Layout *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.sticky-layout@0.3.4/ */
+
+  "stick-layout": {
+    "prefix": "stil",
+    "body": [
+      "  \"store.product\": {",
+      "    \"children\": [",
+      "      \"flex-layout.row#product-breadcrumb\",",
+      "      \"flex-layout.row#product-main\",",
+      "      \"sticky-layout#buy-button\"",
+      "    ],",
+      "    \"parent\": {",
+      "      \"challenge\": \"challenge.address\"",
+      "    }",
+      "  },",
+      "  \"sticky-layout#buy-button\": {",
+      "    \"props\": {",
+      "      \"position\": \"bottom\"",
+      "    },",
+      "    \"children\": [\"flex-layout.row#buy-button\"]",
+      "  },",
+      "  \"flex-layout.row#buy-button\": {",
+      "    \"props\": {",
+      "      \"marginTop\": 4,",
+      "      \"marginBottom\": 7,",
+      "      \"paddingBottom\": 2",
+      "    },",
+      "    \"children\": [\"buy-button\"]",
+      "  }"
+    ],
+    "description": "stick-layout"
+  },
+
+  "sticky-layout.stack-container": {
+    "prefix": "stisc",
+    "body": [
+      "  \"header\": {",
+      "    \"blocks\": [\"header-layout.desktop\"]",
+      "  },",
+      "  \"header.full\": {",
+      "    \"blocks\": [\"header-layout.desktop\"]",
+      "  },",
+      "  \"header-layout.desktop\": {",
+      "    // define a stack-container",
+      "    \"children\": [\"sticky-layout.stack-container#header\"]",
+      "  },",
+      "  \"sticky-layout.stack-container#header\": {",
+      "    \"props\": {",
+      "      \"position\": \"top\"",
+      "    },",
+      "    \"children\": [",
+      "      \"sticky-layout#links-menu\",",
+      "      // this notification.bar is not sticky, it will be scrolled away",
+      "      \"notification.bar#home\",",
+      "      \"sticky-layout#main-menu\"",
+      "    ]",
+      "  },",
+      "  \"notification.bar#home\": {",
+      "    \"props\": {",
+      "      \"content\": \"SELECTED ITEMS ON SALE! CHECK IT OUT!\"",
+      "    }",
+      "  },",
+      "  \"sticky-layout#links-menu\": {",
+      "    \"children\": [\"vtex.menu@2.x:menu#websites\"]",
+      "  },",
+      "  \"sticky-layout#main-menu\": {",
+      "    \"children\": [\"vtex.menu@2.x:menu#category-menu\"]",
+      "  }"
+    ],
+    "description": "sticky-layout.stack-container"
+  },
+
+  /* VTEX Tab Layout *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.tab-layout@0.4.0/ */
+
+  "Tab Layout": {
+    "prefix": "tbl",
+    "body": [
+      "\"store.home\": {",
+      "    \"blocks\": [",
+      "      \"tab-layout#home\"",
+      "    ]",
+      "  },",
+      "  \"tab-layout#home\": {",
+      "    \"children\": [",
+      "      \"tab-list#home\",",
+      "      \"tab-content#home\"",
+      "    ],",
+      "    \"props\": {",
+      "      \"blockClass\": \"home\",",
+      "      \"defaultActiveTabId\": \"home1\"",
+      "    }",
+      "  },",
+      "  \"tab-list#home\": {",
+      "    \"children\": [",
+      "      \"tab-list.item#home1\",",
+      "      \"tab-list.item#home2\"",
+      "      ]",
+      "  },",
+      "  \"tab-list.item#home1\": {",
+      "    \"props\": {",
+      "      \"tabId\": \"home1\",",
+      "      \"label\": \"Home 1\",",
+      "      \"defaultActiveTab\": true",
+      "    }",
+      "  },",
+      "  \"tab-list.item#home2\": {",
+      "    \"props\": {",
+      "      \"tabId\": \"home2\",",
+      "      \"label\": \"Home 2\"",
+      "    }",
+      "  },",
+      "  \"tab-content#home\": {",
+      "    \"children\": [",
+      "      \"tab-content.item#home1\",",
+      "      \"tab-content.item#home2\"",
+      "    ]",
+      "  },",
+      "  \"tab-content.item#home1\": {",
+      "    \"children\": [",
+      "      \"carousel#home\"",
+      "    ],",
+      "    \"props\": {",
+      "      \"tabId\": \"home1\"",
+      "    }",
+      "  },",
+      "  \"tab-content.item#home2\": {",
+      "    \"children\": [",
+      "      \"shelf#home\",",
+      "      \"info-card#home\",",
+      "      \"rich-text#question\",",
+      "      \"rich-text#link\",",
+      "      \"newsletter\"",
+      "    ],",
+      "    \"props\": {",
+      "      \"tabId\": \"home2\"",
+      "    }",
+      "  }"
+    ],
+    "description": "Tab Layout"
+  },
+
+  /* Challenge Trade Policy Condition *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.challenge-tp-condition@0.4.1/ */
+
+  "Challenge Trade Policy Condition": {
+    "prefix": "ctpc",
+    "body": [
+      "/* Used in B2B environments, the Challenge block is a non-rendered block responsible for checking if a user is allowed to access the store's content*/",
+      " \"store.home\": {",
+      "   \"blocks\": [",
+      "     \"shelf#home\",",
+      "     \"flex-layout.row#deals\",",
+      "     \"info-card#home\",",
+      "     \"rich-text#question\",",
+      "     \"rich-text#link\",",
+      "     \"newsletter\"",
+      "   ],",
+      "   \"parent\": {",
+      "     \"challenge\": \"challenge.trade-policy-condition\"",
+      "   },",
+      "\"challenge.trade-policy-condition\": {",
+      "  \"props\": {",
+      "    \"redirectPath\": \"/login\"",
+      "  }",
+      "},",
+      "",
+      "",
+      " },"
+    ],
+    "description": "Challenge Trade Policy Condition"
+  },
+
+  /* Store Image *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.store-image@0.5.3/ */
+
+  "Store Image": {
+    "prefix": "imgl",
+    "body": [
+      "/* The Store Image app exports the list-context.image-list block, which is responsible for working with image content in the store's theme.*/ ",
+      " \"list-context.image-list#demo\": {",
+      "    \"children\": [\"slider-layout#demo-images\"],",
+      "    \"props\": {",
+      "      \"height\": 650,",
+      "      \"images\": [",
+      "        {",
+      "          \"image\": \"https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png\",",
+      "          \"description\": \"something something\"",
+      "        },",
+      "        {",
+      "          \"image\": \"https://storecomponents.vteximg.com.br/assets/vtex.file-manager-graphql/images/Group%207%20(1)%20(1)%20(1)%20(1)%20(1)___c6b3ed853fb16a08b265753b50e0c57a.png\",",
+      "          \"description\": \"something something\"",
+      "        }",
+      "      ]",
+      "    }",
+      "  },",
+      "",
+      "  \"slider-layout#demo-images\": {",
+      "    \"props\": {",
+      "      \"itemsPerPage\": {",
+      "        \"desktop\": 1,",
+      "        \"tablet\": 1,",
+      "        \"phone\": 1",
+      "      },",
+      "      \"infinite\": true",
+      "    }",
+      "  },"
+    ],
+    "description": "Store Image"
+  },
+
+  /* Store Image *****************************************************************************************************************************************************************************************************/
+  /***** https://vtex.io/docs/components/all/vtex.store-components@3.131.0/image/ */
+
+  "Image": {
+    "prefix": "ifm",
+    "body": [
+      "\"store.custom#about-us\": {",
+      "   \"blocks\": [",
+      "     \"flex-layout.row#about-us\",",
+      "     \"iframe\"",
+      "   ]",
+      " },",
+      "",
+      "\"iframe\": {",
+      "  \"props\": {",
+      "    \"src\": \"\"",
+      "  }",
+      "},",
+      ""
+    ],
+    "description": "Vtex Iframe"
+  },
+
+  "Vtex Image": {
+    "prefix": "imag",
+    "body": [
+      "  \"image#example\": {",
+      "    \"props\": {",
+      "      \"src\": \"https://storecomponents.vteximg.com.br/arquivos/box.png\",",
+      "      \"maxHeight\": 24",
+      "    }",
+      "  },"
+    ],
+    "description": "Image"
+  },
+
+  /* Info Card *****************************************************************************************************************************************************************************************************/
+  /* https://vtex.io/docs/components/all/vtex.store-components@3.131.0/info-card/*/
+
+  "Info Card": {
+    "prefix": "ifcd",
+    "body": [
+      "\"info-card\": {",
+      "    \"props\": {",
+      "      \"id\": \"info-card-example\",",
+      "      \"isFullModeStyle\": false,",
+      "      \"textPosition\": \"left\",",
+      "      \"imageUrl\": \"https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png\",",
+      "      \"headline\": \"Clearance Sale\",",
+      "      \"callToActionText\": \"DISCOVER\",",
+      "      \"callToActionUrl\": \"/sale/d\",",
+      "      \"blockClass\": \"info-card-example\",",
+      "      \"textAlignment\": \"center\"",
+      "    }",
+      "  },"
+    ],
+    "description": "Info Card"
+  }
+}

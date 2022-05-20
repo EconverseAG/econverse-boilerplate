@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "files.autoSave": "off",
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/*.css": true,
+  },
+}
