@@ -25,7 +25,7 @@ export const Globs = Object.freeze({
         `!./**/*.test.{${Extensions.scripts}}`,
       ],
       styles: [`${Folders.src.styles}/*.{${Extensions.styles}}`],
-      assets: [`${Folders.src.assets.assets}/*.{${Extensions.assets}}`],
+      assets: [`${Folders.src.assets}/*.{${Extensions.assets}}`],
       scripts_modules: [
         `${Folders.src.root}/**/*.{${Extensions.scripts}}`,
         `!${Folders.src.root}/*.{${Extensions.scripts}}`,
