@@ -70,7 +70,7 @@ export const assets = (callback) => {
     base: './src',
   });
 
-  return Pipes.assets(source, callback);
+  return Pipes.Assets(source, callback);
 };
 
 // Watch for file changes;
@@ -83,10 +83,12 @@ export const watcher = (callback) => {
 
   // Handles JavaScript modules changes;
   const handleJSModules = (filePath) => {
-    const parentPath = Utils.getParentPath(filePath);
-    const source = src(`${parentPath}\\*.{${Paths.Extensions.scripts}}`, {
-      base: './src',
-    });
+    const source = src(
+      `${Paths.Folders.src.root}\\**\\*.{${Paths.Extensions.scripts}}`,
+      {
+        base: './src',
+      },
+    );
     return Pipes.Scripts(source, () => Utils.logUpdate(filePath));
   };
 
