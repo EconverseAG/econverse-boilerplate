@@ -41,10 +41,8 @@
     "vtex.iframe": "0.x",
     "vtex.breadcrumb": "1.x",
     "vtex.sticky-layout": "0.x",
-    "vtex.add-to-cart-button": "0.x"
-  },
-  "peerDependencies": {
-    "econverse.components": "1.x"
+    "vtex.add-to-cart-button": "0.x",
+    "econverse.components": "3.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
