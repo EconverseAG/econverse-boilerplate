@@ -1,15 +1,11 @@
 {
   "name": "STORE_NAME",
-  "version": "0.0.1",
-  "main": "index.js",
+  "private": true,
   "license": "ISC",
   "scripts": {
-    "clean": "rm -rf dist",
-    "start": "npm run clean && concurrently \"npm:sass\" \"npm:vlink\" \"npm:sass-react\""
+    "start": "concurrently \"cd store-components && yarn start\" \"cd store-theme && yarn start\""
   },
   "dependencies": {
-    "concurrently": "^5.3.0",
-    "global": "^4.4.0",
-    "sass": "^1.32.7"
+    "concurrently": "^7.1.0"
   }
 }
