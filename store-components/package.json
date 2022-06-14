@@ -4,7 +4,8 @@
     "lint": "eslint --ext js,jsx,ts,tsx .",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json}\"",
     "clean": "rm -rf dist",
-    "start": "npm run clean && concurrently \"npm:vlink\" \"npm:sass-react\"",
+    "start": "npm run clean && npm run vtex:typings && concurrently \"npm:vlink\" \"npm:sass-react\"",
+    "vtex:typings": "vtex setup --typings",
     "vlink": "vtex link --verbose",
     "sass-react": "sass --watch --no-source-map react/styles/scss:react/styles/css --style compressed\""
   },
