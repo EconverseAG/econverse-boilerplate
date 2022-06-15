@@ -1,0 +1,16 @@
+{
+  "name": "@STORE_NAME/ci",
+  "private": true,
+  "license": "ISC",
+  "scripts": {
+    "start": "babel-node --presets es2015 ./createSession.js"
+  },
+  "dependencies": {
+    "minimalist": "^1.0.0",
+    "node-fetch": "2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
