@@ -62,7 +62,6 @@ const getAuthToken = async ({ appkey, apptoken, workspace }) => {
 
   const sessionDirectory = path.join(homedir, ".vtex", "session");
 
-  console.log('>>> create', sessionDirectory);
   if (!fs.existsSync(sessionDirectory)) {
     fs.mkdirSync(sessionDirectory, { recursive: true });
   }
