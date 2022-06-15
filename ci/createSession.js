@@ -20,7 +20,7 @@ const homedir = '..';
 
 const ACCOUNT = "STORE_NAME";
 
-const getAuthToken = async ({ appkey, apptoken, workspace }) => {
+const getAuthToken = async ({ appkey, apptoken }) => {
   const payload = {
     appkey,
     apptoken,
