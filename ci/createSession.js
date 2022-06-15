@@ -18,7 +18,7 @@ console.log(args);
 
 const homedir = '..';
 
-const ACCOUNT = "americanflex";
+const ACCOUNT = "STORE_NAME";
 
 const getAuthToken = async ({ appkey, apptoken, workspace }) => {
   const payload = {
